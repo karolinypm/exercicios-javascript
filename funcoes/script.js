@@ -40,16 +40,17 @@ console.log(tipoDeDado(2));
 // utilize essa função para mostrar no console o seu nome completo
 // quando o evento 'scroll' ocorrer.
 addEventListener('scroll', function(){
-  console.log('Karoliny Pires Matias')
+console.log('Karoliny Pires Matias')
 })
 
 // Corrija o erro abaixo
-//function precisoVisitar(paisesVisitados) {
-//  var totalPaises = 193;
-//  return `Ainda faltam ${totalPaises - paisesVisitados} países para visitar`;
-//}
-//function jaVisitei(paisesVisitados) {
-//  return `Já visitei ${paisesVisitados} do total de ${totalPaises} países`;
-//}
-//precisoVisitar(20);
-//jaVisitei(20);
+var totalPaises = 193;//Variável dentro do escopo de uma função não pode ser lida pelas outras funções
+
+function precisoVisitar(paisesVisitados) {
+  return `Ainda faltam ${totalPaises - paisesVisitados} países para visitar`;
+}
+function jaVisitei(paisesVisitados) {
+return `Já visitei ${paisesVisitados} do total de ${totalPaises} países`;
+}
+console.log(precisoVisitar(20)) 
+console.log(jaVisitei(20));
