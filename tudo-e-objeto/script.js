@@ -9,8 +9,8 @@ let titulo = document.getElementsByTagName('h1');
 console.log(titulo)
 let texto = document.querySelector('.paragrafo');
 console.log(texto.innerHTML) //apresenta o texto do HTML
-console.log(texto.appendChild)
-console.log(texto.after)
+console.log(texto.appendChild)//insere um elemento filho ao pai
+console.log(texto.after)//
 
 
 // busque na web um objeto (método) capaz de interagir com o clipboard, 
