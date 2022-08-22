@@ -55,6 +55,15 @@ console.log(novoHtml);
 const frase = 'Melhor do ano!';
 const ultimoCaracter = frase[frase.length-1]
 console.log(ultimoCaracter)
-// Retorne o total de taxas
 
+// Retorne o total de taxas
 const transacoes2 = ['Taxa do Banco', '   TAXA DO PÃO', '  taxa do mercado', 'depósito Bancário', 'TARIFA especial'];
+
+let taxasTotal = 0;
+transacoes2.forEach((item)=>{
+  item = item.toLowerCase(). trim().slice(0,4)
+
+  if(item === 'taxa')
+  taxasTotal++
+})
+console.log(taxasTotal);
